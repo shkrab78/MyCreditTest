@@ -1,9 +1,6 @@
 ﻿namespace ControllersLib
 {
-    public class HiController : MyTestController //"Hi everyone!";
+    public class HiController : MyTestController
     {
-        public HiController() : base()
-        {
-        }
     }
 }

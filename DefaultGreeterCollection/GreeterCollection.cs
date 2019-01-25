@@ -9,14 +9,12 @@ namespace DefaultGreeterCollection
         public Type GetGreeterType(Type forType)
         {
             if (forType == typeof(HelloController))
-            {
                 return typeof(DefaultGreeterForHello);
-            }
-            else if (forType == typeof(HiController))
-            {
+
+            if (forType == typeof(HiController))
                 return typeof(DefaultGreeterForHi);
-            }
-            else return null;
+
+            return null;
         }
     }
 }

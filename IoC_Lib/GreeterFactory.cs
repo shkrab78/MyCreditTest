@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Reflection;
-using System.Web;
 
 namespace IoC_Lib
 {
@@ -33,21 +32,6 @@ namespace IoC_Lib
                                        $"Библиотека - \"{lName}\" \n" +
                                        $"Имя класса - \"{forType.Name}\"", e);
             }
-        }
-
-        public static IGreeter Create(Type forType, string libName)
-        {
-            return Create(forType, null, libName);
-        }
-
-        public static IGreeter Create<T>(object[] createArgs = null, string libName = null)
-        {
-            return Create(typeof(T), createArgs, libName);
-        }
-
-        public static IGreeter Create<T>(string libName)
-        {
-            return Create<T>(null, libName);
         }
 
         private static Library GetLibrary(string libName)
